@@ -17,12 +17,69 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 </head>
 
 <body>
 
-    <!-- TODO: Content -->
-
+ <!-- Main content -->
+ <div class="container">
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbo_text">
+      <h1 class="text-center"><b>Train Schedule</b></h1>
+      <h3 class="text-center">Find The Best Route For Your Commute</h3>
+    </div>
+    <div class="container px-0">
+        <div class="card mb-3">
+            <h5 class="card-header">Current Train Schedule</h5>
+            <div class="card-body">
+                <table class="table table-hover" id="train-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Desitination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container px-0">
+        <div class="card mb-3">
+            <h5 class="card-header">Add New Train Information</h5>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="trainname-input" class="font-weight-bold">Train Name</label>
+                        <input type="text" class="form-control" id="trainname-input" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination-input" class="font-weight-bold">Destination</label>
+                        <input type="text" class="form-control" id="destination-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="firsttime-input" class="font-weight-bold">First Train Time (HH:MM - military
+                            time)</label>
+                        <input data-format=" hh:mm" type="text" class="form-control" id="firsttime-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency-input" class="font-weight-bold">Frequency (min)</label>
+                        <input type="number" class="form-control" id="frequency-input">
+                    </div>
+                    <button type="submit" class="btn btn-primary rounded-0" id="add-train">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">

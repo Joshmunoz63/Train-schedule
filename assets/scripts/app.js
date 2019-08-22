@@ -1,3 +1,7 @@
+/*---------\
+| FIREBASE |
+\---------*/
+
 var firebaseConfig = {
     apiKey: "AIzaSyDQ3XmcUcXSywucNJk6X-diRODhUHi2-oM",
     authDomain: "train-87cb7.firebaseapp.com",
@@ -12,11 +16,12 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
-setInterval(function (startTime) {
-    $("#timer").html(moment().format('hh:mm a'))
-}, 1000);
 
-$("#add-train").on("click", function () {
+/*----------------------\
+| ON CLICK TO ADD TRAIN |
+\----------------------*/
+
+$("#submit").on("click", function () {
    
     event.preventDefault();
 
@@ -120,5 +125,3 @@ function timeUpdater() {
 
     })
 };
-
-setInterval(timeUpdater, 6000);

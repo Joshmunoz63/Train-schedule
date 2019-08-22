@@ -1,19 +1,32 @@
-h1 {
+/*---------------------\
+| STYLING FOR HOMEPAGE |
+\---------------------*/
+
+.jumbotron {
     text-align: center;
-    font-weight: bold;
-    font-family: 'Mukta', sans-serif;
-    font-weight: bold;
-}
-
-h4,h5 {
-    text-align: center;
-}
-
-#add-train {
-    background-color: tomato;
-}
-
-#header {
-    background-color: tomato;
     color: white;
+    font-family: 'Lexend Tera', sans-serif;
+    border-radius: 0;
+    padding: 1%;
+    background-image: linear-gradient(0deg, rgb(39, 39, 39) 100%, transparent);
 }
+
+.col-lg-12 {
+    padding: 0;
+}
+
+/*-----------------------\
+| STYLING FOR SEARCH BTN |
+\-----------------------*/
+
+#submit {
+    background-color: black;
+    color: white;
+    border: 3px solid rgb(0, 84, 211);
+}
+
+.btn:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24), 0 10px 20px 0 rgba(0,0,0,0.19);
+    background-color: rgb(255, 0, 55);
+}
+
